@@ -1,71 +1,33 @@
 # EduThon: Empowering Parents to Guide Their Child’s Learning Journey with AI
 
-EduThon is a transformative learning platform that reimagines how families approach education. Unlike traditional edtech tools, EduThon places parents at the heart of their child’s learning process. Here’s how it works:
+EduThon is a next-generation, AI-powered learning platform designed to transform how families approach education. By putting parents at the center of their child’s learning, EduThon creates a collaborative, supportive, and highly effective educational experience.
 
-- **Children Learn & Play:** Kids engage with interactive lessons, quizzes, and stories designed to make learning fun and memorable. As they progress, the platform intelligently tracks their performance, highlighting both strengths and areas needing improvement.
+## Why EduThon?
+- **Parent-First Learning:** Parents receive AI-generated, easy-to-understand explanations for the exact concepts their children struggle with, so they can learn first and then teach their children.
+- **Gamified Child Experience:** Children engage with interactive lessons, quizzes, and stories, making learning fun and memorable.
+- **Insightful Analytics:** The platform tracks each child’s strengths and weaknesses, providing actionable insights for targeted improvement.
+- **Multilingual Support:** AI explanations and learning materials are available in multiple languages, making EduThon accessible to diverse families.
+- **AI at the Core:** Powered by Google Gemini, EduThon delivers personalized, structured, and clear learning content for both parents and children.
 
-- **Insightful Analytics:** EduThon doesn’t just stop at scores. It pinpoints the exact concepts where a child struggles, providing a clear roadmap for targeted improvement.
+## How It Works
+1. **Children Learn & Play:** Kids take quizzes and lessons. Their performance is tracked in detail.
+2. **Parents Get Insights:** EduThon identifies weak concepts and provides parents with tailored, AI-powered resources.
+3. **Parents Teach:** After learning, parents help their children master difficult topics, creating a powerful learning loop.
 
-- **Parents Learn First:** Instead of leaving parents in the dark, EduThon delivers AI-powered, easy-to-understand explanations and resources for the specific topics their child finds challenging. Parents can quickly master these concepts themselves, regardless of their own educational background.
+## Project Structure
+- **backend/**: Python Flask API integrating with Google Gemini for AI explanations.
+- **gamified-learning/**: React frontend for both parents and children, featuring dashboards, quizzes, stories, and analytics.
 
-- **Guided Teaching:** Armed with new knowledge, parents are empowered to teach and support their children more effectively, turning every challenge into a shared learning opportunity and strengthening the parent-child bond.
+## Getting Started
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/praveengalaxy/EduThon.git
+   cd EduThon
+   ```
+2. **See backend/README.md and gamified-learning/README.md for setup instructions.**
 
-- **AI at the Core:** The platform leverages advanced AI (Google Gemini) to generate personalized explanations, tips, and learning materials in multiple languages, ensuring accessibility for diverse families.
-
-EduThon is more than just a tool—it’s a movement towards collaborative, family-driven education, where technology bridges the gap between home and school, and every parent becomes their child’s best teacher.
+## License
+MIT
 
 ---
-
-## Backend Overview
-
-This is the Python backend service for EduThon. It integrates with the Gemini AI API and provides a RESTful interface for the frontend to:
-- Request concept explanations in various languages
-- Retrieve key learning points and teaching tips
-- Power the parent and child learning workflows
-
-## Setup
-
-1. **Create a virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Configure API keys:**
-   Create a `.env` file with your Gemini API key:
-   ```
-   GOOGLE_API_KEY=your_gemini_api_key_here
-   ```
-
-4. **Run the server:**
-   ```bash
-   python app.py
-   ```
-   The server will start on http://localhost:5000
-
-## API Endpoints
-
-### POST /api/explain
-Get an AI-generated explanation for any concept, tailored to your preferred language.
-
-**Request body:**
-```json
-{
-  "topic": "string",
-  "language": "string"
-}
-```
-
-**Response:**
-```json
-{
-  "explanation": "string",
-  "keyPoints": ["string"],
-  "tips": "string"
-}
-``` 
+EduThon: Where every parent becomes their child’s best teacher. 
